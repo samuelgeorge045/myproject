@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+
+
+<section class="vh-100" style="background-color: #2779e2;">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-9">
+
+        <h1 class="text-white mb-4">Post Your Job</h1>
+
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body">
+
+            <div class="row align-items-center pt-4 pb-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Company name</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                <input type="text" name="cname" value="{{com.user.username}}" class="form-control form-control-lg" />
+
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Email address</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                <input type="email" name="cmail" value="{{com.user.email}}" class="form-control form-control-lg" placeholder="example@example.com" />
+
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+            <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Job Title</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+                <input type="text" name="jtitle" class="form-control form-control-lg"  />
+
+              </div>
+            </div>
+             <hr class="mx-n3">
+
+            <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Work Type</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+<div class="col-md-6 mb-4">
+
+                  <select class="select" name="wtype">
+                    <option value="1" disabled>select</option>
+                    <option value="2">remote</option>
+                    <option value="3">hybrid</option>
+
+                  </select>
+
+                </div>
+              </div>
+            </div>
+             <hr class="mx-n3">
+
+              <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Experience</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+<div class="col-md-6 mb-4">
+
+                  <select class="select" name="exp">
+                    <option value="1" disabled>select</option>
+                    <option value="2">0-1</option>
+                    <option value="3">1-2</option>
+                    <option value="4">3-4</option>
+                      <option value="5">4-5</option>
+                      <option value="6">5-6</option>
+                      <option value="7">6-7</option>
+                  </select>
+
+                </div>
+              </div>
+            </div>
+             <hr class="mx-n3">
+
+              <div class="row align-items-center py-3">
+              <div class="col-md-3 ps-5">
+
+                <h6 class="mb-0">Job Type</h6>
+
+              </div>
+              <div class="col-md-9 pe-5">
+
+<div class="col-md-6 mb-4">
+
+                  <select class="select" name="jtype">
+                    <option value="1" disabled>Gender</option>
+                    <option value="2">half time</option>
+                    <option value="3">full time</option>
+
+                  </select>
+
+                </div>
+              </div>
+            </div>
+
+            <hr class="mx-n3">
+
+
+
+            <hr class="mx-n3">
+
+            <div class="px-5 py-4">
+              <button type="submit" class="btn btn-primary btn-lg">post</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    </form>
+</body>
+</html>

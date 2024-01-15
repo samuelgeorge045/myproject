@@ -1,0 +1,106 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+    .divider-text {
+    position: relative;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.divider-text span {
+    padding: 7px;
+    font-size: 12px;
+    position: relative;
+    z-index: 2;
+}
+.divider-text:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    top: 55%;
+    left: 0;
+    z-index: 1;
+}
+
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-twitter {
+    background-color: #42AEEC;
+    color: #fff;
+}
+</style>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+    <hr>
+
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Finalize Here</h4>
+	<p class="text-center">Get started with your job</p>
+
+	<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+	<div class="form-group input-group">
+         <label>company</label>
+
+        <input name="comname" class="form-control" value="{{cnm}}" placeholder="company" type="text">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+         <label>designation</label>
+
+        <input name="dsgn" class="form-control" value="{{ttl}}" placeholder="designation" type="text" >
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+
+		</input>
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+         <label>name</label>
+
+		<input type="text" value="{{name}}" name="name">
+	</div> <!-- form-group end.// -->
+    <div class="form-group input-group">
+         <label>email</label>
+
+        <input class="form-control" value="{{mail}}" placeholder="email" type="email" name="mail">
+    </div> <!-- form-group// -->
+    <div class="form-group input-group">
+         <label>qualification</label>
+
+        <input class="form-control" value="{{qual}}" placeholder="qualification" type="text" name="qual">
+    </div> <!-- form-group// -->
+           <div class="form-group input-group">
+                <label>phone</label>
+
+        <input class="form-control" value="{{ph}}" placeholder="phone" type="text" name="phone">
+    </div> <!-- form-group// -->
+
+           <div class="form-group input-group">
+                <label>experience</label>
+
+        <input class="form-control" value="{{xp}}" placeholder="experience" type="text" name="exp">
+    </div> <!-- form-group// -->
+        <div class="form-group input-group">
+                <label>resume</label>
+
+        <input class="form-control" placeholder="resume upload" type="file" name="cv">
+    </div> <!-- form-group// -->
+
+            <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> apply  </button>
+    </div> <!-- form-group// -->
+
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div>
+<!--container end.//-->
